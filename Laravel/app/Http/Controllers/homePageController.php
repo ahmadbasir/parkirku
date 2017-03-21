@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Kendaraan;
+use Carbon\Carbon;
 
 class homePageController extends Controller
 {
@@ -21,6 +22,8 @@ class homePageController extends Controller
       $totalMobilC = $this->jumlahMobilGedungC();
       $totalMotorLB= $this->jumlahLapanganBasket();
 
+      $day  = $this->checkFriday();
+
       return view('homePage.konten.kuota',[
         'totalMotorG'  => $totalMotorG,
         'totalMobilG'  => $totalMobilG,
@@ -30,8 +33,19 @@ class homePageController extends Controller
         'totalMobilE'  => $totalMobilE,
         'totalMotorC'  => $totalMotorC,
         'totalMobilC'  => $totalMobilC,
-        'totalMotorLB' => $totalMotorLB
+        'totalMotorLB' => $totalMotorLB,
+        'friday'          => $day
       ]);
+    }
+
+    public function checkFriday(){
+      $date = Carbon::now();
+      if($date->format('l') == "Tuesday"){
+        return 1;
+      }
+      else{
+        return 0;
+      }
     }
 
     public function jumlahMotorGedungG(){

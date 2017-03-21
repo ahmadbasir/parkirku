@@ -34,14 +34,21 @@
               <div class="service-box">
                   <i class="fa fa-4x fa-bookmark-o text-primary sr-icons"></i>
                   <h2>Gedung H</h2>
-                  <h3 class="text-muted"><table align="center">
-                    <tr>
-                      <td align="left">Motor</td>
-                      <td>&nbsp; : &nbsp;</td>
-                      <td align="right"><strong>{{ $totalMotorH }}</strong>/200 </td>
-                    </tr>
-                  </table>
-                </h3>
+                  @if ($friday == 1)
+                  <p class="text-muted">
+                    Maaf, sementara <b>TUTUP</b> karena digunakan untuk <strong>JUMATAN</strong>
+                  </p>
+                  @else
+                  <h3 class="text-muted">
+                    <table align="center">
+                      <tr>
+                        <td align="left">Motor</td>
+                        <td>&nbsp; : &nbsp;</td>
+                        <td align="right"><strong>{{ $totalMotorH }}</strong>/200 </td>
+                      </tr>
+                    </table>
+                  </h3>
+                  @endif
               </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
@@ -68,7 +75,11 @@
                       <tr>
                         <td align="left">Motor</td>
                         <td>&nbsp; : &nbsp;</td>
+                        @if ($friday == 1)
+                        <td align="right"><strong>{{ $totalMotorE }}</strong>/200 </td>
+                        @else
                         <td align="right"><strong>{{ $totalMotorE }}</strong>/300 </td>
+                        @endif
                       </tr>
                       <tr>
                         <td align="left">Mobil</td>

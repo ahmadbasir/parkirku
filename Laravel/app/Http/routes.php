@@ -10,9 +10,17 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+use Carbon\Carbon;
+
 
 Route::get('/','homePageController@index');
 Route::get('/admin','parkirController@index')->name('adminPanel');
 Route::post('/admin','parkirController@tambahKendaraan')->name('adminKendaraanTambah');
 Route::put('/admin/keluar/{id}','parkirController@keluar')->name('adminKendaraanKeluar');
 Route::get('/admin/daftar','parkirController@daftarKendaraan')->name('adminListParkir');
+
+Route::get('/day',function(){
+  $day = Carbon::now();
+  $date = $day->format('l')."now";
+  dd($date);
+});
