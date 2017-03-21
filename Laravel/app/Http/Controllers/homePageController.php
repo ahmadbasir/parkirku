@@ -22,7 +22,7 @@ class homePageController extends Controller
       $totalMobilC = $this->jumlahMobilGedungC();
       $totalMotorLB= $this->jumlahLapanganBasket();
 
-      $day  = $this->checkFriday();
+      $jumatan = $this->waktuJumatan();
 
       return view('homePage.konten.kuota',[
         'totalMotorG'  => $totalMotorG,
@@ -34,14 +34,16 @@ class homePageController extends Controller
         'totalMotorC'  => $totalMotorC,
         'totalMobilC'  => $totalMobilC,
         'totalMotorLB' => $totalMotorLB,
-        'friday'          => $day
+        'waktu'        => $jumatan
       ]);
     }
 
-    public function checkFriday(){
+    public function waktuJumatan(){
       $date = Carbon::now();
       if($date->format('l') == "Tuesday"){
-        return 1;
+        if($date->hour >= 8 && ($date->hour <= 13 && $date->minute <30)){
+          return 1;
+        }
       }
       else{
         return 0;

@@ -34,9 +34,9 @@
               <div class="service-box">
                   <i class="fa fa-4x fa-bookmark-o text-primary sr-icons"></i>
                   <h2>Gedung H</h2>
-                  @if ($friday == 1)
+                  @if ($waktu == 1)
                   <p class="text-muted">
-                    Maaf, sementara <b>TUTUP</b> karena digunakan untuk <strong>JUMATAN</strong>
+                    <b>TUTUP</b> dari jam <b>08.00 - 13.30</b>, karena digunakan untuk persiapan dan waktu <strong>JUMATAN</strong>
                   </p>
                   @else
                   <h3 class="text-muted">
@@ -75,7 +75,7 @@
                       <tr>
                         <td align="left">Motor</td>
                         <td>&nbsp; : &nbsp;</td>
-                        @if ($friday == 1)
+                        @if ($waktu == 1)
                         <td align="right"><strong>{{ $totalMotorE }}</strong>/200 </td>
                         @else
                         <td align="right"><strong>{{ $totalMotorE }}</strong>/300 </td>

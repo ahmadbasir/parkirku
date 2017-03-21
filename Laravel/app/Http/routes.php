@@ -21,6 +21,6 @@ Route::get('/admin/daftar','parkirController@daftarKendaraan')->name('adminListP
 
 Route::get('/day',function(){
   $day = Carbon::now();
-  $date = $day->format('l')."now";
-  dd($date);
+  $date = $day->hour;
+  var_dump($date);
 });
