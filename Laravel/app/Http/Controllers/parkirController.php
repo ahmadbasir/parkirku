@@ -7,15 +7,45 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Kendaraan;
+use App\Http\Controllers\homePageController;
 
 class parkirController extends Controller
 {
     public function index(){
+
+
       $data = [
         'active'  => 1,
         'titleTop'=> 'Kendaraan Masuk',
+        'sisa'  => $this->sisaKendaraan()
       ];
       return view('panelAdmin.layanan.kendaraanMasuk', $data);
+    }
+
+    public function sisaKendaraan(){
+      $data = new homePageController();
+      $motorG = 200 - $data->jumlahMotorGedungG();
+      $mobilG = 35 - $data->jumlahMobilGedungG();
+      $motorH = 200 - $data->jumlahMotorGedungH();
+      $motorD = 100 - $data->jumlahMotorGedungD();
+      $motorE = 300 - $data->jumlahMotorGedungE();
+      $mobilE = 50 - $data->jumlahMobilGedungE();
+      $motorC = 100 - $data->jumlahMotorGedungC();
+      $mobilC = 25 - $data->jumlahMobilGedungC();
+      $LB     = 250 - $data->jumlahLapanganBasket();
+
+      $sisa = [
+        "motorG" => $motorG,
+        "mobilG" => $mobilG,
+        "motorH" => $motorH,
+        "motorD" => $motorD,
+        "motorE" => $motorE,
+        "mobilE" => $mobilE,
+        "motorC" => $motorC,
+        "mobilC" => $mobilC,
+        "LB"     => $LB
+      ];
+      return $sisa;
     }
 
     public function tambahKendaraan(Request $request){

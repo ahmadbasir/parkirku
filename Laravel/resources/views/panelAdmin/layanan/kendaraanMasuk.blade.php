@@ -72,7 +72,8 @@
               <div class="col-sm-3">
               </div>
               <div class="col-sm-9">
-                <label><h3>Gedung G</h3></label>
+                <label><h3>Gedung G</h3></label><br>
+                <label>Sisa <strong>Motor</strong> : <b>{{$sisa['motorG']}}</b> | <strong>Mobil</strong> : <b>{{$sisa['mobilG']}}</b></label>
               </div>
             </div>
 
@@ -80,7 +81,7 @@
               <label class="col-sm-3 control-label no-padding-right"> Nomor PLAT </label>
 
               <div class="col-sm-9">
-                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" autofocus />
+                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" autofocus />
               </div>
             </div>
 
@@ -116,7 +117,8 @@
               <div class="col-sm-3">
               </div>
               <div class="col-sm-9">
-                <label><h3>Gedung H</h3></label>
+                <label><h3>Gedung H</h3></label><br>
+                <label>Sisa <strong>Motor</strong> : <b>{{$sisa['motorH']}}</b></label>
               </div>
             </div>
 
@@ -124,7 +126,7 @@
               <label class="col-sm-3 control-label no-padding-right"> Nomor PLAT </label>
 
               <div class="col-sm-9">
-                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" autofocus />
+                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" autofocus />
               </div>
             </div>
 
@@ -134,7 +136,6 @@
               <div class="col-sm-9">
                 <select class="col-xs-10 col-sm-5" name="tipe">
                   <option value="MOTOR">MOTOR</option>
-                  <option value="MOBIL">MOBIL</option>
                 </select>
               </div>
             </div>
@@ -160,7 +161,8 @@
               <div class="col-sm-3">
               </div>
               <div class="col-sm-9">
-                <label><h3>Gedung E</h3></label>
+                <label><h3>Gedung E</h3></label><br>
+                <label>Sisa <strong>Motor</strong> : <b>{{$sisa['motorE']}}</b> | <strong>Mobil</strong> : <b>{{$sisa['mobilE']}}</b></label>
               </div>
             </div>
 
@@ -168,7 +170,7 @@
               <label class="col-sm-3 control-label no-padding-right"> Nomor PLAT </label>
 
               <div class="col-sm-9">
-                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" autofocus />
+                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" autofocus />
               </div>
             </div>
 
@@ -204,7 +206,8 @@
               <div class="col-sm-3">
               </div>
               <div class="col-sm-9">
-                <label><h3>Gedung D</h3></label>
+                <label><h3>Gedung D</h3></label><br>
+                <label>Sisa <strong>Motor</strong> : <b>{{$sisa['motorD']}}</b></label>
               </div>
             </div>
 
@@ -212,7 +215,7 @@
               <label class="col-sm-3 control-label no-padding-right"> Nomor PLAT </label>
 
               <div class="col-sm-9">
-                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" autofocus />
+                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" autofocus />
               </div>
             </div>
 
@@ -222,7 +225,6 @@
               <div class="col-sm-9">
                 <select class="col-xs-10 col-sm-5" name="tipe">
                   <option value="MOTOR">MOTOR</option>
-                  <option value="MOBIL">MOBIL</option>
                 </select>
               </div>
             </div>
@@ -248,7 +250,8 @@
               <div class="col-sm-3">
               </div>
               <div class="col-sm-9">
-                <label><h3>Gedung C</h3></label>
+                <label><h3>Gedung C</h3></label><br>
+                <label>Sisa <strong>Motor</strong> : <b>{{$sisa['motorC']}}</b> | <strong>Mobil</strong> : <b>{{$sisa['mobilC']}}</b></label>
               </div>
             </div>
 
@@ -256,7 +259,7 @@
               <label class="col-sm-3 control-label no-padding-right"> Nomor PLAT </label>
 
               <div class="col-sm-9">
-                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" autofocus />
+                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" autofocus />
               </div>
             </div>
 
@@ -292,7 +295,8 @@
               <div class="col-sm-3">
               </div>
               <div class="col-sm-9">
-                <label><h3>Lapangan Basket</h3></label>
+                <label><h3>Lapangan Basket</h3></label><br>
+                <label>Sisa <strong>Motor</strong> : <b>{{$sisa['LB']}}</b></label>
               </div>
             </div>
 
@@ -300,7 +304,7 @@
               <label class="col-sm-3 control-label no-padding-right"> Nomor PLAT </label>
 
               <div class="col-sm-9">
-                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" autofocus />
+                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" autofocus />
               </div>
             </div>
 
@@ -310,7 +314,6 @@
               <div class="col-sm-9">
                 <select class="col-xs-10 col-sm-5" name="tipe">
                   <option value="MOTOR">MOTOR</option>
-                  <option value="MOBIL">MOBIL</option>
                 </select>
               </div>
             </div>

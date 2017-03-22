@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Admin Parkiran</title>
+    <title>Admin PARKIRKU</title>
 
     <!-- CSS FILE -->
     @include('panelAdmin.stylesheet.css')
