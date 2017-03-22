@@ -9,17 +9,18 @@
           <br>
         </div>
         <div class="col-lg-8 col-lg-offset-2">
-          <form>
+          <form method="post" action="{{ route('lapor') }}">
+            {{ csrf_field() }}
               <div class="row control-group">
                   <div class="form-group col-xs-12">
                       <label>Nama Pelapor</label>
-                      <input type="text" class="form-control" placeholder="Nama">
+                      <input type="text" name="nama" class="form-control" placeholder="Nama">
                   </div>
               </div>
               <div class="row control-group">
                   <div class="form-group col-xs-12">
                       <label>No. HP</label>
-                      <input type="text" class="form-control" placeholder="No. HP">
+                      <input type="text" name="noHP" class="form-control" placeholder="No. HP">
                       <p><font size="2">( NB: Pastikan No. HP anda <b>aktif</b> dan sudah terintergrasi dengan Line, WA, atau Telegram.
                         Sehingga dapat dihubungi dengan segera )</font></p>
                   </div>
@@ -28,13 +29,13 @@
               <div class="row control-group">
                   <div class="form-group col-xs-12 floating-label-form-group controls">
                       <label>Judul Lapor</label>
-                      <input type="text" class="form-control" placeholder="Judul Lapor">
+                      <input type="text" name="judul" class="form-control" placeholder="Judul Lapor">
                   </div>
               </div>
               <div class="row control-group">
                   <div class="form-group col-xs-12">
                       <label>Pesan</label>
-                      <textarea rows="5" class="form-control" placeholder="Pesan"></textarea>
+                      <textarea rows="6" name="pesan" class="form-control" placeholder="Pesan"></textarea>
                       <p class="help-block text-danger"></p>
                   </div>
               </div>

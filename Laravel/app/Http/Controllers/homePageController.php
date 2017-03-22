@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Kendaraan;
+use App\Lapor;
 use Carbon\Carbon;
 
 class homePageController extends Controller
@@ -36,6 +37,16 @@ class homePageController extends Controller
         'totalMotorLB' => $totalMotorLB,
         'waktu'        => $jumatan
       ]);
+    }
+
+    public function laporkan(Request $request){
+      $lapor = new Lapor();
+      $lapor->namaPelapor = $request->nama;
+      $lapor->noHP        = $request->noHP;
+      $lapor->judulLapor  = $request->judul;
+      $lapor->pesanLapor  = $request->pesan;
+      $lapor->save();
+      return back();
     }
 
     public function waktuJumatan(){

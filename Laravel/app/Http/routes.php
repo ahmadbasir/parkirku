@@ -14,6 +14,7 @@ use Carbon\Carbon;
 
 
 Route::get('/','homePageController@index');
+Route::post('/','homePageController@laporkan')->name('lapor');
 Route::get('/admin','parkirController@index')->name('adminPanel');
 Route::post('/admin','parkirController@tambahKendaraan')->name('adminKendaraanTambah');
 Route::put('/admin/keluar/{id}','parkirController@keluar')->name('adminKendaraanKeluar');
