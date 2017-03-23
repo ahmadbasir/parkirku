@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Kendaraan;
+use App\Lapor;
 use App\Http\Controllers\homePageController;
 
 class parkirController extends Controller
@@ -72,5 +73,15 @@ class parkirController extends Controller
         'list'    => Kendaraan::orderBy('created_at', 'desc')->get(),
       ];
       return view('panelAdmin.layanan.daftarKendaraan', $data);
+    }
+
+    public function daftarLapor(){
+      $data = [
+        'active'  => 3,
+        'titleTop'=> 'Daftar Lapor',
+        'list'    => Lapor::orderBy('created_at', 'desc')->get(),
+      ];
+
+      return view('panelAdmin.layanan.lapor', $data);
     }
 }

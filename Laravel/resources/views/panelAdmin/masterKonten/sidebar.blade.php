@@ -18,7 +18,7 @@
     @endif
       <a href="{{ route('adminListParkir') }}">
         <i class="menu-icon fa fa-list"></i>
-        <span class="menu-text"> Daftar Kendaraan </span>
+        <span class="menu-text"> Daftar &nbsp; Kendaraan </span>
       </a>
     </li>
 
@@ -27,7 +27,7 @@
     @else
     <li class="">
     @endif
-      <a href="#">
+      <a href="{{ route('adminLapor') }}">
         <i class="menu-icon fa fa-tag"></i>
         <span class="menu-text"> Lapor </span>
       </a>

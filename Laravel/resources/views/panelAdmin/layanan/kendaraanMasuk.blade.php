@@ -81,7 +81,7 @@
               <label class="col-sm-3 control-label no-padding-right"> Nomor PLAT </label>
 
               <div class="col-sm-9">
-                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" autofocus />
+                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" required />
               </div>
             </div>
 
@@ -126,7 +126,7 @@
               <label class="col-sm-3 control-label no-padding-right"> Nomor PLAT </label>
 
               <div class="col-sm-9">
-                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" autofocus />
+                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" required />
               </div>
             </div>
 
@@ -170,7 +170,7 @@
               <label class="col-sm-3 control-label no-padding-right"> Nomor PLAT </label>
 
               <div class="col-sm-9">
-                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" autofocus />
+                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" required />
               </div>
             </div>
 
@@ -215,7 +215,7 @@
               <label class="col-sm-3 control-label no-padding-right"> Nomor PLAT </label>
 
               <div class="col-sm-9">
-                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" autofocus />
+                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" required />
               </div>
             </div>
 
@@ -259,7 +259,7 @@
               <label class="col-sm-3 control-label no-padding-right"> Nomor PLAT </label>
 
               <div class="col-sm-9">
-                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" autofocus />
+                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" required />
               </div>
             </div>
 
@@ -304,7 +304,7 @@
               <label class="col-sm-3 control-label no-padding-right"> Nomor PLAT </label>
 
               <div class="col-sm-9">
-                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" autofocus />
+                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" required />
               </div>
             </div>
 

@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Kendaraan;
 use App\Lapor;
 use Carbon\Carbon;
+use Validator;
 
 class homePageController extends Controller
 {
@@ -40,13 +41,26 @@ class homePageController extends Controller
     }
 
     public function laporkan(Request $request){
+      $validator = Validator::make($request->all(),[
+        'nama'  => 'required|max:30',
+        'noHP'  => 'required|digits_between:11,13',
+        'judul' => 'required',
+        'pesan' => 'required',
+      ]);
+
+      if($validator->fails()){
+        return redirect('/#lapor')
+              ->withInput()
+              ->withErrors($validator);
+      }
+
       $lapor = new Lapor();
       $lapor->namaPelapor = $request->nama;
       $lapor->noHP        = $request->noHP;
       $lapor->judulLapor  = $request->judul;
       $lapor->pesanLapor  = $request->pesan;
       $lapor->save();
-      return back();
+      return redirect('/#lapor')->with('pesan','sukses');
     }
 
     public function waktuJumatan(){

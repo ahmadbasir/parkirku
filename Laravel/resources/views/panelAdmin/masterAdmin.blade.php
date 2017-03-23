@@ -8,7 +8,7 @@
     @include('panelAdmin.stylesheet.css')
 
   </head>
-  <body class="skin-1">
+  <body class="skin-2">
 
     <!-- NAVBAR -->
     @include('panelAdmin.masterKonten.navbar')

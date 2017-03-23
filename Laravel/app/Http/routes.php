@@ -18,7 +18,8 @@ Route::post('/','homePageController@laporkan')->name('lapor');
 Route::get('/admin','parkirController@index')->name('adminPanel');
 Route::post('/admin','parkirController@tambahKendaraan')->name('adminKendaraanTambah');
 Route::put('/admin/keluar/{id}','parkirController@keluar')->name('adminKendaraanKeluar');
-Route::get('/admin/daftar','parkirController@daftarKendaraan')->name('adminListParkir');
+Route::get('/admin/daftar/parkir','parkirController@daftarKendaraan')->name('adminListParkir');
+Route::get('/admin/daftar/lapor','parkirController@daftarLapor')->name('adminLapor');
 
 Route::get('/day',function(){
   $day = Carbon::now();
