@@ -16,67 +16,94 @@
 </div>
 
 <div class="row">
-  <div class="col-xs-12">
-    <!-- PAGE CONTENT BEGINS -->
-    <table id="simple-table" class="table table-bordered table-hover">
-      <thead>
-        <tr>
-          <th>NOMOR PLAT</th>
-          <th>TIPE</th>
-          <th>
-            <i class="ace-icon fa fa-clock-o bigger-110"></i>
-            MASUK
-          </th>
-          <th>
-            <i class="ace-icon fa fa-clock-o bigger-110"></i>
-            KELUAR
-          </th>
-          <th>STATUS</th>
-          <th class="hidden-480"></th>
-        </tr>
-      </thead>
-      <tbody>
-        @foreach($list as $lists)
-        <tr>
-          <td>{{ $lists->noPlat }}</td>
-          <td>{{ $lists->tipeKendaraan }}</td>
-          <td>{{ $lists->created_at }}</td>
+		<div class="col-xs-12">
+											<div id="dynamic-table_wrapper" class="dataTables_wrapper form-inline no-footer">
+                        <div id="dynamic-table_wrapper" class="dataTables_wrapper form-inline no-footer">
+                        <table id="dynamic-table" class="table table-responsive table-striped table-bordered table-hover dataTable no-footer" role="grid" aria-describedby="dynamic-table_info">
+												<thead>
+													<tr role="row">
+                            <th class="center sorting_disabled" style="display:none;" rowspan="1" colspan="1" aria-label=""></th>
+                            <th class="sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Domain: activate to sort column ascending">NOMOR PLAT</th>
+                            <th class="sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Price: activate to sort column ascending">TIPE</th>
+                            <th class="hidden-480 sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Clicks: activate to sort column ascending">MASUK</th>
+                            <th class="sorting_asc" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Update: activate to sort column descending" aria-sort="ascending">
+															<i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>KELUAR
+														</th>
+                            <th class="hidden-480 sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending">Status</th>
+                            <th class="sorting_disabled" rowspan="1" colspan="1" aria-label=""></th>
+                          </tr>
+												</thead>
+												<tbody>
+                          @foreach ($list as $data)
+												  <tr role="row" class="odd">
+														<td class="center" style="display:none;"></td>
+														<td class="">{{ $data->noPlat}}</td>
+                            <td class="">{{ $data->tipeKendaraan}}</td>
+                            <td class="hidden-480">{{ $data->created_at}}</td>
+                            @if ($data->kondisi == 1)
+                            <td class="hidden-480">{{ $data->updated_at }}</td>
+                            @else
+                            <td class="hidden-480"></td>
+                            @endif
 
-          @if ($lists->kondisi == 0)
-          <td></td>
-          @else
-          <td>{{ $lists->updated_at }}</td>
-          @endif
-
-          @if ($lists->kondisi == 0)
-          <td class="hidden-480">
-            <span class="label label-sm label-success">BELUM KELUAR</span>
-          </td>
-          @else
-          <td class="hidden-480">
-            <span class="label label-sm label-warning">SUDAH KELUAR</span>
-          </td>
-          @endif
-
-          @if ($lists->kondisi == 0)
-          <td>
-            <form action="{{ route('adminKendaraanKeluar', $lists->id) }}" method="POST">
-              {{ csrf_field() }}
-              {{ method_field('PUT') }}
-              <button type="submit" class="btn btn-xs btn-danger">
-                <i class="ace-icon fa fa-external-link  bigger-120"></i>
-                KELUAR
-              </button>
-            </form>
-          </td>
-          @else
-          <td></td>
-          @endif
-        </tr>
-        @endforeach
-      </tbody>
-    </table>
-    <!-- PAGE CONTENT ENDS -->
+                            @if ($data->kondisi == 1)
+                            <td class="">
+															<span class="label label-sm label-danger">sudah keluar</span>
+														</td>
+                            @else
+                            <td class="">
+															<span class="label label-sm label-success">belum keluar</span>
+														</td>
+                            @endif
+                            <td width="10%">
+                              <div class="hidden-sm hidden-xs action-buttons">
+                                @if ($data->kondisi == 0)
+                                <a class="red" href="/admin/keluar/{{$data->id}}"><i class="ace-icon glyphicon glyphicon-remove bigger-130"></i></a>
+                                @else
+                                <a class="green" href="#"><i class="ace-icon glyphicon glyphicon-ok bigger-130"></i></a>
+                                @endif
+                                <a class="blue" href="#"><i class="ace-icon glyphicon glyphicon-edit  bigger-130"></i></a>
+                              </div>
+                              <div class="hidden-md hidden-lg">
+																<div class="inline pos-rel">
+																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+																		<i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+																	</button>
+																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                    @if ($data->kondisi == 0)
+                                    <li>
+																			<a href="/admin/keluar/{{$data->id}}" class="tooltip-info" data-rel="tooltip" title="Status In">
+																				<span class="red">
+																					<i class="ace-icon glyphicon glyphicon-remove bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+                                    @else
+                                    <li>
+																			<a href="#" class="tooltip-info" data-rel="tooltip" title="Status Out">
+																				<span class="green">
+																					<i class="ace-icon glyphicon glyphicon-ok bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+                                    @endif
+																		<li>
+																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="blue">
+																					<i class="ace-icon glyphicon glyphicon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+                            </td>
+													</tr>
+                          @endforeach
+                        </tbody>
+											</table>
+                    </div>
+                  </div>
   </div>
 </div>
 @endsection

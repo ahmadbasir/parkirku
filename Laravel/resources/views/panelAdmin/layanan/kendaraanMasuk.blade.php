@@ -26,7 +26,7 @@
     <div class="tabbable">
       <ul class="nav nav-tabs" id="myTab">
         @if (session('tab'))
-          @if (session('tab')=='H')
+          @if (session('tab')=='G')
           <li class="active">
           @else
           <li>
@@ -115,9 +115,13 @@
 
             <div class="form-group">
               <label class="col-sm-3 control-label no-padding-right"> Nomor PLAT </label>
-
               <div class="col-sm-9">
-                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" required />
+                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" value="{{Input::old('noPlat')}}" required />
+              </div>
+              <div class="col-sm-3 col-xs-12">
+              </div>
+              <div class="col-sm-9">
+                @if ($errors->has('noPlat')) <p style="color:red;"><br>no plat sudah terdaftar</p> @endif
               </div>
             </div>
 
@@ -166,7 +170,12 @@
               <label class="col-sm-3 control-label no-padding-right"> Nomor PLAT </label>
 
               <div class="col-sm-9">
-                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" required />
+                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" value="{{Input::old('noPlat')}}" required />
+              </div>
+              <div class="col-sm-3 col-xs-12">
+              </div>
+              <div class="col-sm-9">
+                @if ($errors->has('noPlat')) <p style="color:red;"><br>no plat sudah terdaftar</p> @endif
               </div>
             </div>
 
@@ -214,7 +223,12 @@
               <label class="col-sm-3 control-label no-padding-right"> Nomor PLAT </label>
 
               <div class="col-sm-9">
-                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" required />
+                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" value="{{Input::old('noPlat')}}" required />
+              </div>
+              <div class="col-sm-3 col-xs-12">
+              </div>
+              <div class="col-sm-9">
+                @if ($errors->has('noPlat')) <p style="color:red;"><br>no plat sudah terdaftar</p> @endif
               </div>
             </div>
 
@@ -263,7 +277,12 @@
               <label class="col-sm-3 control-label no-padding-right"> Nomor PLAT </label>
 
               <div class="col-sm-9">
-                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" required />
+                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" value="{{Input::old('noPlat')}}" required />
+              </div>
+              <div class="col-sm-3 col-xs-12">
+              </div>
+              <div class="col-sm-9">
+                @if ($errors->has('noPlat')) <p style="color:red;"><br>no plat sudah terdaftar</p> @endif
               </div>
             </div>
 
@@ -311,7 +330,12 @@
               <label class="col-sm-3 control-label no-padding-right"> Nomor PLAT </label>
 
               <div class="col-sm-9">
-                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" required />
+                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" value="{{Input::old('noPlat')}}" required />
+              </div>
+              <div class="col-sm-3 col-xs-12">
+              </div>
+              <div class="col-sm-9">
+                @if ($errors->has('noPlat')) <p style="color:red;"><br>no plat sudah terdaftar</p> @endif
               </div>
             </div>
 
@@ -360,7 +384,12 @@
               <label class="col-sm-3 control-label no-padding-right"> Nomor PLAT </label>
 
               <div class="col-sm-9">
-                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" required />
+                <input class="col-xs-10 col-sm-5" name="noPlat" type="text" placeholder="H 1234 XYZ" style="text-transform:uppercase" value="{{Input::old('noPlat')}}" required />
+              </div>
+              <div class="col-sm-3 col-xs-12">
+              </div>
+              <div class="col-sm-9">
+                @if ($errors->has('noPlat')) <p style="color:red;"><br>no plat sudah terdaftar</p> @endif
               </div>
             </div>
 

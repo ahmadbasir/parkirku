@@ -9,12 +9,11 @@ use App\Http\Controllers\Controller;
 use App\Kendaraan;
 use App\Lapor;
 use App\Http\Controllers\homePageController;
+use Validator;
 
 class parkirController extends Controller
 {
     public function index(){
-
-
       $data = [
         'active'  => 1,
         'titleTop'=> 'Kendaraan Masuk',
@@ -50,6 +49,16 @@ class parkirController extends Controller
     }
 
     public function tambahKendaraan(Request $request){
+      $validator = Validator::make($request->all(),[
+        'noPlat'  => 'required|unique:kendaraans'
+      ]);
+      if($validator->fails()){
+        return back()
+              ->with('tab', $request->gedung)
+              ->withInput()
+              ->withErrors($validator);
+      }
+
       $input = new Kendaraan();
       $input->noPlat  = strtoupper($request->noPlat);
       $input->tipeKendaraan = $request->tipe;
@@ -84,4 +93,5 @@ class parkirController extends Controller
 
       return view('panelAdmin.layanan.lapor', $data);
     }
+
 }
