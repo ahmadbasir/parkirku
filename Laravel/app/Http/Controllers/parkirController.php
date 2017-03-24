@@ -56,7 +56,7 @@ class parkirController extends Controller
       $input->gedung  = $request->gedung;
       $input->kondisi = 0;
       $input->save();
-      return back();
+      return back()->with('tab',$request->gedung);
     }
 
     public function keluar($id){
