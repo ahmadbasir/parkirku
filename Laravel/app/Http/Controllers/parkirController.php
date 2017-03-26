@@ -84,6 +84,24 @@ class parkirController extends Controller
       return view('panelAdmin.layanan.daftarKendaraan', $data);
     }
 
+    public function viewEditKendaraan($id){
+      $data = [
+        'active'  => 2,
+        'titleTop'=> 'Daftar Kendaraan',
+        'edit'    => Kendaraan::findOrFail($id),
+      ];
+      return view('panelAdmin.layanan.editStatusKendaraan', $data);
+    }
+
+    public function editKendaraan(Request $request, $id){
+      $update = Kendaraan::findOrFail($id);
+      $update->noPlat = $request->noPlat;
+      $update->tipeKendaraan = $request->tipe;
+      $update->gedung = $request->gedung;
+      $update->save();
+      return redirect()->route('adminListParkir');
+    }
+
     public function daftarLapor(){
       $data = [
         'active'  => 3,

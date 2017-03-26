@@ -24,8 +24,9 @@
 													<tr role="row">
                             <th class="center sorting_disabled" style="display:none;" rowspan="1" colspan="1" aria-label=""></th>
                             <th class="sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Domain: activate to sort column ascending">NOMOR PLAT</th>
-                            <th class="sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Price: activate to sort column ascending">TIPE</th>
-                            <th class="hidden-480 sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Clicks: activate to sort column ascending">MASUK</th>
+                            <th class="sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Price: activate to sort column ascending">GEDUNG (KENDARAAN)</th>
+                            <th class="hidden-480 sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Clicks: activate to sort column ascending">
+                              <i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>MASUK</th>
                             <th class="sorting_asc" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Update: activate to sort column descending" aria-sort="ascending">
 															<i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>KELUAR
 														</th>
@@ -38,7 +39,7 @@
 												  <tr role="row" class="odd">
 														<td class="center" style="display:none;"></td>
 														<td class="">{{ $data->noPlat}}</td>
-                            <td class="">{{ $data->tipeKendaraan}}</td>
+                            <td class="">{{ $data->gedung }} ({{ $data->tipeKendaraan}})</td>
                             <td class="hidden-480">{{ $data->created_at}}</td>
                             @if ($data->kondisi == 1)
                             <td class="hidden-480">{{ $data->updated_at }}</td>
@@ -62,7 +63,7 @@
                                 @else
                                 <a class="green" href="#"><i class="ace-icon glyphicon glyphicon-ok bigger-130"></i></a>
                                 @endif
-                                <a class="blue" href="#"><i class="ace-icon glyphicon glyphicon-edit  bigger-130"></i></a>
+                                <a class="blue" href="/admin/edit/{{$data->id}}"><i class="ace-icon glyphicon glyphicon-edit  bigger-130"></i></a>
                               </div>
                               <div class="hidden-md hidden-lg">
 																<div class="inline pos-rel">
@@ -88,7 +89,7 @@
 																		</li>
                                     @endif
 																		<li>
-																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																			<a href="/admin/edit/{{$data->id}}" class="tooltip-success" data-rel="tooltip" title="Edit">
 																				<span class="blue">
 																					<i class="ace-icon glyphicon glyphicon-edit bigger-120"></i>
 																				</span>
