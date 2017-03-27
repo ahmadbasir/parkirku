@@ -66,8 +66,8 @@
             <option value="H">H</option>
             <option value="D">D</option>
             <option value="C">C</option>
-            <option value="E">G</option>
-            <option value="LB">H</option>
+            <option value="E">E</option>
+            <option value="LB">LB</option>
           </select>
         </div>
       </div>

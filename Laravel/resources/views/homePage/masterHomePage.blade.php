@@ -9,7 +9,7 @@
 
     @include('homePage.konten.navbar')
 
-    <header style="background-image: url('{{asset('assets/images/parkir.jpg')}}');">
+    <header style="background-image: url('{{asset('assets/images/parkir0.jpg')}}');">
         <div class="header-content">
             <div class="header-content-inner">
                 <h1 id="homeHeading">PARKIR KAMPUS UDINUS</h1>

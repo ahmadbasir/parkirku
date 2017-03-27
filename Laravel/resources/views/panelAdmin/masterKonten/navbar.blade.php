@@ -14,7 +14,7 @@
       <a href="{{ route('adminPanel') }}" class="navbar-brand">
         <small>
           <i class="fa fa-exchange"></i>
-          PARKIRKU
+          PARKIRKU v0.90
         </small>
       </a>
     </div>
