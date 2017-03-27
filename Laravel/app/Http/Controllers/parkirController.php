@@ -112,4 +112,13 @@ class parkirController extends Controller
       return view('panelAdmin.layanan.lapor', $data);
     }
 
+    public function panduanPARKIRKU(){
+      $data = [
+        'active'  => 4,
+        'titleTop'=> 'Panduan PARKIRKU'
+      ];
+
+      return view('panelAdmin.layanan.panduan', $data);
+    }
+
 }

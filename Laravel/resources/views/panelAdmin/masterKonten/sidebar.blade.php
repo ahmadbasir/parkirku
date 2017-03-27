@@ -33,5 +33,23 @@
       </a>
     </li>
 
+    @if ($active == 4)
+    <li class="active">
+    @else
+    <li class="">
+    @endif
+      <a href="{{ route('panduan') }}">
+        <i class="menu-icon fa fa-book"></i>
+        <span class="menu-text"> Panduan PARKIRKU </span>
+      </a>
+    </li>
+
+    <li class="">
+      <a href="#">
+        <i class="menu-icon glyphicon glyphicon-off"></i>
+        <span class="menu-text"> Keluar </span>
+      </a>
+    </li>
+
   </ul>
 </div>

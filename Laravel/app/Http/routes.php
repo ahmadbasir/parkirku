@@ -25,6 +25,7 @@ Route::get('/admin/edit/{id}','parkirController@viewEditKendaraan')->name('tampi
 Route::put('/admin/edit/{id}','parkirController@editKendaraan')->name('edit');
 Route::get('/admin/daftar/parkir','parkirController@daftarKendaraan')->name('adminListParkir');
 Route::get('/admin/daftar/lapor','parkirController@daftarLapor')->name('adminLapor');
+Route::get('/admin/panduan','parkirController@panduanPARKIRKU')->name('panduan');
 
 
 /// Percobaan
