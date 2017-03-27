@@ -14,7 +14,10 @@
             <div class="header-content-inner">
                 <h1 id="homeHeading">PARKIR KAMPUS UDINUS</h1>
                 <hr>
-                <p>bla bla bla</p>
+                <p><font color="white">
+                  Mari Lihat Kapasitas Parkir UDINUS <br>
+                  Sebelum Memarkirkan Kendaraan
+                </font></p>
                 <a href="#check_kuota" class="btn btn-primary btn-xl page-scroll">Check Kuota Parkir</a>
             </div>
         </div>
