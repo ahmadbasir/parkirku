@@ -13,3 +13,5 @@ jika sudah selesai langsung saja jalankan script berikut pada folder project lar
 ```
 php artisan migrate
 ```
+
+edit bagian resources/views/panelAdmin/layanan/panduan.blade.php untuk panduan
