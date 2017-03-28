@@ -104,8 +104,30 @@
   			</span>
   		</div>
   		<div class="timeline-items">
-  			<div>
-  				
+  			<div class="timeline-item clearfix">
+  				<div class="timeline-info">
+  					<i class="timeline-indicator ace-icon btn no-hover glyphicon glyphicon-tags"></i>
+  				</div>
+  				<div class="widget-box transparent">
+  					<div class="widget-header widget-header-small">
+  						<h5 class="widget-title smaller"><b>Title</b></h5>
+  						<span class="widget-toolbar no-border">
+  							<a href="#" data-action="collapse">
+  								<i class="ace-icon fa fa-check blue"></i>
+  							</a>
+  						</span>
+  					</div>
+  					<div class="widget-body">
+  						<div class="widget-main">
+  							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  						</div>
+  					</div>
+  				</div>
   			</div>
   		</div>
   	</div>
