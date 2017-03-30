@@ -60,10 +60,10 @@
                               <div class="hidden-sm hidden-xs action-buttons">
                                 @if ($data->kondisi == 0)
                                 <a class="red" href="/admin/keluar/{{$data->id}}"><i class="ace-icon glyphicon glyphicon-remove bigger-130"></i></a>
+                                <a class="blue" href="/admin/edit/{{$data->id}}"><i class="ace-icon glyphicon glyphicon-edit  bigger-130"></i></a>
                                 @else
                                 <a class="green" href="#"><i class="ace-icon glyphicon glyphicon-ok bigger-130"></i></a>
                                 @endif
-                                <a class="blue" href="/admin/edit/{{$data->id}}"><i class="ace-icon glyphicon glyphicon-edit  bigger-130"></i></a>
                               </div>
                               <div class="hidden-md hidden-lg">
 																<div class="inline pos-rel">
@@ -79,6 +79,13 @@
 																				</span>
 																			</a>
 																		</li>
+                                    <li>
+																			<a href="/admin/edit/{{$data->id}}" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="blue">
+																					<i class="ace-icon glyphicon glyphicon-edit bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
                                     @else
                                     <li>
 																			<a href="#" class="tooltip-info" data-rel="tooltip" title="Status Out">
@@ -88,13 +95,6 @@
 																			</a>
 																		</li>
                                     @endif
-																		<li>
-																			<a href="/admin/edit/{{$data->id}}" class="tooltip-success" data-rel="tooltip" title="Edit">
-																				<span class="blue">
-																					<i class="ace-icon glyphicon glyphicon-edit bigger-120"></i>
-																				</span>
-																			</a>
-																		</li>
 																	</ul>
 																</div>
 															</div>
