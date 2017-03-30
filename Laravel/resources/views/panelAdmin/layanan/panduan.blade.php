@@ -118,13 +118,18 @@
   						</span>
   					</div>
   					<div class="widget-body">
-  						<div class="widget-main">
-  							<p>
-                  pada menu kendaraan masuk, aplikasi akan menampilkan form pengisian kendaraan masuk dari tiap gedung.
+  						<div class="widget-main col-sm-4 col-xs-12">
+
+  							<p style="text-align: justify;">
+                  <span class="label-lg blue alert-info"><b>1.</b></span> pada menu kendaraan masuk, aplikasi akan menampilkan form pengisian kendaraan masuk dari tiap gedung.
                   <br><br>
                   <img class="img-rounded img-responsive" src="{{asset('assets/images/tampilan_kendaraan_masuk.png')}}" alt="tampilan kendaraan masuk" />
                   <br>
-                  Pada tampilan tersebut terlihat pada bagian atas terdapat tab yang bertuliskan tiap gedung yang akan dijadikan tempat parkir. Misalkan anda sebagai petugas di bagian gedung D, maka tekanlah tombol gedung D pada tab yang kemudian anda akan diarahkan kebagian pengisian form untuk parkir di gedung tersebut.
+                </p>
+              </div>
+              <div class="widget-main col-sm-8 col-xs-12">
+                <p>
+                  <span class="label-lg blue alert-info"><b>2.</b></span> Pada tampilan tersebut terlihat pada bagian atas terdapat tab yang bertuliskan tiap gedung yang akan dijadikan tempat parkir. Misalkan anda sebagai petugas di bagian gedung D, maka tekanlah tombol gedung D pada tab yang kemudian anda akan diarahkan kebagian pengisian form untuk parkir di gedung tersebut.
                   <br><br>
                   <img class="img-rounded img-responsive" src="{{asset('assets/images/tab_kendaraan_masuk.png')}}" alt="tab kendaraan masuk" />
                   <br>
@@ -138,6 +143,7 @@
                   <br>
                   pada bagian pengisian form juga terdapat sisa kuota/slot sisa parkir yang tersedia
                 </p>
+
   						</div>
   					</div>
   				</div>
