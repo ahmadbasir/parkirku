@@ -40,7 +40,7 @@
     @endif
       <a href="{{ route('panduan') }}">
         <i class="menu-icon fa fa-book"></i>
-        <span class="menu-text"> Panduan PARKIRKU </span>
+        <span class="menu-text"> Panduan </span>
       </a>
     </li>
 
