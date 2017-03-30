@@ -112,9 +112,7 @@
   					<div class="widget-header widget-header-small">
   						<h5 class="widget-title smaller"><b>Kendaraan Masuk</b></h5>
   						<span class="widget-toolbar no-border">
-  							<a href="#" data-action="collapse">
   								<i class="ace-icon fa fa-check blue"></i>
-  							</a>
   						</span>
   					</div>
   					<div class="widget-body">
@@ -137,6 +135,41 @@
                   </ol>
                   <br>
                   pada bagian pengisian form juga terdapat sisa kuota/slot sisa parkir yang tersedia
+                </p>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+      <div class="timeline-items">
+  			<div class="timeline-item clearfix">
+  				<div class="timeline-info">
+  					<i class="timeline-indicator ace-icon btn no-hover glyphicon glyphicon-tags"></i>
+  				</div>
+  				<div class="widget-box transparent">
+  					<div class="widget-header widget-header-small">
+  						<h5 class="widget-title smaller"><b>Daftar Kendaraan</b></h5>
+  						<span class="widget-toolbar no-border">
+  								<i class="ace-icon fa fa-check blue"></i>
+  						</span>
+  					</div>
+  					<div class="widget-body">
+  						<div class="widget-main">
+  							<p>
+                  Pada menu menampilkan informasi semua daftar kendaraan berupa no plat, lokasi kendaraan,
+                  jenis kendaraan, waktu masuk dan keluar, dan tombol aksi untuk informasi kendaraan.
+                  <br><br>
+                  <img class="img-rounded img-responsive" src="{{asset('assets/images/daftar_kendaraan_potrait.png')}}" alt="daftar kendaraan potrait" />
+                  <br> ( mode potrait pada mobile ) <br><br>
+                  <img class="img-rounded img-responsive" src="{{asset('assets/images/daftar_kendaraan_landscape.png')}}" alt="daftar kendaraan landscape" />
+                  <br> ( mode landscape pada mobile ) <br><br>
+                  Pada tampilan tersebut terdapat icon <img class="img-rounded img-responsive" src="{{asset('assets/images/icon.png')}}" alt="icon" />
+                  jika ditekan akan muncul beberapa tombol <img class="img-rounded img-responsive" src="{{asset('assets/images/icon_up.png')}}" alt="icon" />
+                  jika icon ditekan dan statusnya sudah keluar <img class="img-rounded img-responsive" src="{{asset('assets/images/icon_ok.png')}}" alt="icon" />
+                  <br>
+                  <div class="alert alert-info">
+                    Note: icon tidak akan muncul pada tampilan Desktop.
+                  </div>
                 </p>
   						</div>
   					</div>
