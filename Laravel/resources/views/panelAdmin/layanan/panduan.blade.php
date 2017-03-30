@@ -55,7 +55,7 @@
   						</span>
   					</div>
   				</div>
-  			
+
   			</div>
   		</div>
   		<div class="timeline-items">
@@ -110,7 +110,7 @@
   				</div>
   				<div class="widget-box transparent">
   					<div class="widget-header widget-header-small">
-  						<h5 class="widget-title smaller"><b>Title</b></h5>
+  						<h5 class="widget-title smaller"><b>Kendaraan Masuk</b></h5>
   						<span class="widget-toolbar no-border">
   							<a href="#" data-action="collapse">
   								<i class="ace-icon fa fa-check blue"></i>
@@ -118,13 +118,32 @@
   						</span>
   					</div>
   					<div class="widget-body">
-  						<div class="widget-main">
-  							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  						<div class="widget-main col-sm-4 col-xs-12">
+
+  							<p style="text-align: justify;">
+                  <span class="label-lg blue alert-info"><b>1.</b></span> pada menu kendaraan masuk, aplikasi akan menampilkan form pengisian kendaraan masuk dari tiap gedung.
+                  <br><br>
+                  <img class="img-rounded img-responsive" src="{{asset('assets/images/tampilan_kendaraan_masuk.png')}}" alt="tampilan kendaraan masuk" />
+                  <br>
+                </p>
+              </div>
+              <div class="widget-main col-sm-8 col-xs-12">
+                <p>
+                  <span class="label-lg blue alert-info"><b>2.</b></span> Pada tampilan tersebut terlihat pada bagian atas terdapat tab yang bertuliskan tiap gedung yang akan dijadikan tempat parkir. Misalkan anda sebagai petugas di bagian gedung D, maka tekanlah tombol gedung D pada tab yang kemudian anda akan diarahkan kebagian pengisian form untuk parkir di gedung tersebut.
+                  <br><br>
+                  <img class="img-rounded img-responsive" src="{{asset('assets/images/tab_kendaraan_masuk.png')}}" alt="tab kendaraan masuk" />
+                  <br>
+                  <h3>#petunjuk pengisian</h3><br>
+                  <ol type="1">
+                    <li>pilihlah gedung dimana anda ditugaskan</li>
+                    <li>masukkan nomor plat kendaraan yang masuk dengan format, contoh: K5944ACC tanpa tanda spasi</li>
+                    <li>pilihlah tipe kendaraan yang masuk</li>
+                    <li>submit data kendaraan</li>
+                  </ol>
+                  <br>
+                  pada bagian pengisian form juga terdapat sisa kuota/slot sisa parkir yang tersedia
+                </p>
+
   						</div>
   					</div>
   				</div>
