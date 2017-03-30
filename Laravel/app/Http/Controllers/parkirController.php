@@ -14,22 +14,18 @@ use Session;
 
 class parkirController extends Controller
 {
-    public function __construct(){
+    public function index(){
       if(Session::has('admin')){
-        return redirect()->route('adminPanel');
+        $data = [
+          'active'  => 1,
+          'titleTop'=> 'Kendaraan Masuk',
+          'sisa'  => $this->sisaKendaraan()
+        ];
+        return view('panelAdmin.layanan.kendaraanMasuk', $data);
       }
       else{
         return redirect()->route('login');
       }
-    }
-
-    public function index(){
-      $data = [
-        'active'  => 1,
-        'titleTop'=> 'Kendaraan Masuk',
-        'sisa'  => $this->sisaKendaraan()
-      ];
-      return view('panelAdmin.layanan.kendaraanMasuk', $data);
     }
 
     public function sisaKendaraan(){
@@ -86,21 +82,31 @@ class parkirController extends Controller
     }
 
     public function daftarKendaraan(){
-      $data = [
-        'active'  => 2,
-        'titleTop'=> 'Daftar Kendaraan',
-        'list'    => Kendaraan::orderBy('created_at', 'desc')->get(),
-      ];
-      return view('panelAdmin.layanan.daftarKendaraan', $data);
+      if(Session::has('admin')){
+        $data = [
+          'active'  => 2,
+          'titleTop'=> 'Daftar Kendaraan',
+          'list'    => Kendaraan::orderBy('created_at', 'desc')->get(),
+        ];
+        return view('panelAdmin.layanan.daftarKendaraan', $data);
+      }
+      else{
+        return redirect()->route('login');
+      }
     }
 
     public function viewEditKendaraan($id){
-      $data = [
-        'active'  => 2,
-        'titleTop'=> 'Daftar Kendaraan',
-        'edit'    => Kendaraan::findOrFail($id),
-      ];
-      return view('panelAdmin.layanan.editStatusKendaraan', $data);
+      if(Session::has('admin')){
+        $data = [
+          'active'  => 2,
+          'titleTop'=> 'Daftar Kendaraan',
+          'edit'    => Kendaraan::findOrFail($id),
+        ];
+        return view('panelAdmin.layanan.editStatusKendaraan', $data);
+      }
+      else{
+        return redirect()->route('login');
+      }
     }
 
     public function editKendaraan(Request $request, $id){
@@ -113,22 +119,31 @@ class parkirController extends Controller
     }
 
     public function daftarLapor(){
-      $data = [
-        'active'  => 3,
-        'titleTop'=> 'Daftar Lapor',
-        'list'    => Lapor::orderBy('created_at', 'desc')->get(),
-      ];
-
-      return view('panelAdmin.layanan.lapor', $data);
+      if(Session::has('admin')){
+        $data = [
+          'active'  => 3,
+          'titleTop'=> 'Daftar Lapor',
+          'list'    => Lapor::orderBy('created_at', 'desc')->get(),
+        ];
+        return view('panelAdmin.layanan.lapor', $data);
+      }
+      else{
+        return redirect()->route('login');
+      }
     }
 
     public function panduanPARKIRKU(){
-      $data = [
-        'active'  => 4,
-        'titleTop'=> 'Panduan PARKIRKU'
-      ];
+      if(Session::has('admin')){
+        $data = [
+          'active'  => 4,
+          'titleTop'=> 'Panduan PARKIRKU'
+        ];
 
-      return view('panelAdmin.layanan.panduan', $data);
+        return view('panelAdmin.layanan.panduan', $data);
+      }
+      else{
+        return redirect()->route('login');
+      }
     }
 
 }
