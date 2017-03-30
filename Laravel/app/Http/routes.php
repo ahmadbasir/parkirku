@@ -19,7 +19,6 @@ Route::post('/','homePageController@laporkan')->name('lapor');
 /// Halaman Untuk Admin
 Route::get('/admin','parkirController@index')->name('adminPanel');
 Route::post('/admin','parkirController@tambahKendaraan')->name('adminKendaraanTambah');
-Route::get('/admin/cari','parkirController@cariKendaraan')->name('adminCariKendaraan');
 Route::get('/admin/keluar/{id}','parkirController@keluar')->name('adminKendaraanKeluar');
 Route::get('/admin/edit/{id}','parkirController@viewEditKendaraan')->name('tampilanEdit');
 Route::put('/admin/edit/{id}','parkirController@editKendaraan')->name('edit');
@@ -27,6 +26,10 @@ Route::get('/admin/daftar/parkir','parkirController@daftarKendaraan')->name('adm
 Route::get('/admin/daftar/lapor','parkirController@daftarLapor')->name('adminLapor');
 Route::get('/admin/panduan','parkirController@panduanPARKIRKU')->name('panduan');
 
+/// Login
+Route::get('/login', 'LoginController@index')->name('login');
+Route::post('/login', 'LoginController@loginParkirku')->name('tryIn');
+Route::get('/logout', 'LoginController@logout')->name('youOut');
 
 /// Percobaan
 Route::get('/day',function(){

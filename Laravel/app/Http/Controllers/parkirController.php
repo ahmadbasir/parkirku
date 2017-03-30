@@ -10,9 +10,19 @@ use App\Kendaraan;
 use App\Lapor;
 use App\Http\Controllers\homePageController;
 use Validator;
+use Session;
 
 class parkirController extends Controller
 {
+    public function __construct(){
+      if(Session::has('admin')){
+        return redirect()->route('adminPanel');
+      }
+      else{
+        return redirect()->route('login');
+      }
+    }
+
     public function index(){
       $data = [
         'active'  => 1,
