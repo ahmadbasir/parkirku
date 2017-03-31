@@ -45,7 +45,7 @@
     </li>
 
     <li class="">
-      <a href="#">
+      <a href="{{route('youOut')}}">
         <i class="menu-icon glyphicon glyphicon-off"></i>
         <span class="menu-text"> Keluar </span>
       </a>

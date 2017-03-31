@@ -18,7 +18,7 @@
                     <a class="page-scroll" href="#lapor">Lapor !!!</a>
                 </li>
                 <li>
-                    <a href="{{ route('adminPanel') }}">LOGIN</a>
+                    <a href="{{ route('login') }}">LOGIN</a>
                 </li>
             </ul>
         </div>
