@@ -32,5 +32,12 @@
     </section>
 
     @include('homePage.style.js')
+    <script type="text/javascript">
+      windows.onload = function (){
+        var section = document.getElementById("check_kuota");
+      }
+      setInterval(onload,1000);
+      setTimeout(onload,1);
+    </script>
   </body>
 </html>

@@ -106,41 +106,50 @@
   		<div class="timeline-items">
   			<div class="timeline-item clearfix">
   				<div class="timeline-info">
-  					<i class="timeline-indicator ace-icon btn no-hover glyphicon glyphicon-tags"></i>
+  					<i class="timeline-indicator ace-icon btn btn-danger no-hover glyphicon glyphicon-tags"></i>
   				</div>
   				<div class="widget-box transparent">
-  					<div class="widget-header widget-header-small">
-  						<h5 id="KM" class="widget-title smaller"><b>Kendaraan Masuk</b></h5>
+  					<div class="widget-header widget-header-small" style="background-color: #ce968c;">
+  						<h5 id="KM" class="widget-title white smaller"><b>Kendaraan Masuk</b></h5>
   						<span class="widget-toolbar no-border">
-  								<i class="ace-icon fa fa-check blue"></i>
+  								<i class="ace-icon white fa fa-check"></i>
   						</span>
   					</div>
   					<div class="widget-body">
   						<div class="widget-main col-sm-4 col-xs-12">
-
-  							<p style="text-align: justify;">
-                  <span class="label-lg blue alert-info"><b>1.</b></span> pada menu kendaraan masuk, aplikasi akan menampilkan form pengisian kendaraan masuk dari tiap gedung.
-                  <br><br>
+  							<div style="text-align: justify;">
+                  <p>
+                    <span class="label-lg alert-danger"><b>1.</b></span>
+                    pada menu kendaraan masuk, aplikasi akan menampilkan form pengisian kendaraan masuk dari tiap gedung.
+                  </p>
                   <img class="img-rounded img-responsive" src="{{asset('assets/images/tampilan_kendaraan_masuk.png')}}" alt="tampilan kendaraan masuk" />
                   <br>
-                </p>
+                </div>
               </div>
               <div class="widget-main col-sm-8 col-xs-12">
-                <p>
-                  <span class="label-lg blue alert-info"><b>2.</b></span> Pada tampilan tersebut terlihat pada bagian atas terdapat tab yang bertuliskan tiap gedung yang akan dijadikan tempat parkir. Misalkan anda sebagai petugas di bagian gedung D, maka tekanlah tombol gedung D pada tab yang kemudian anda akan diarahkan kebagian pengisian form untuk parkir di gedung tersebut.
-                  <br><br>
+                <div>
+                  <p style="text-align: justify;">
+                    <span class="label-lg alert-danger"><b>2.</b></span>
+                     Pada tampilan tersebut terlihat pada bagian atas terdapat tab yang bertuliskan tiap gedung yang akan dijadikan tempat parkir. Misalkan anda sebagai petugas di bagian gedung D, maka tekanlah tombol gedung D pada tab yang kemudian anda akan diarahkan kebagian pengisian form untuk parkir di gedung tersebut.
+                  </p>
                   <img class="img-rounded img-responsive" src="{{asset('assets/images/tab_kendaraan_masuk.png')}}" alt="tab kendaraan masuk" />
-                  <br>
-                  <h3>#petunjuk pengisian</h3><br>
-                  <ol type="1">
-                    <li>pilihlah gedung dimana anda ditugaskan</li>
-                    <li>masukkan nomor plat kendaraan yang masuk dengan format, contoh: K5944ACC tanpa tanda spasi</li>
-                    <li>pilihlah tipe kendaraan yang masuk</li>
-                    <li>submit data kendaraan</li>
-                  </ol>
-                  <br>
-                  pada bagian pengisian form juga terdapat sisa kuota/slot sisa parkir yang tersedia
-                </p>
+                  <p>
+                    <h3>
+                      <div class="alert alert-danger" style="font-size: 20px;">
+                          #petunjuk pengisian
+                      </div>
+                    </h3>
+                    <ol type="1">
+                      <li>pilihlah gedung dimana anda ditugaskan</li>
+                      <li>masukkan nomor plat kendaraan yang masuk dengan format, contoh: K5944ACC tanpa tanda spasi</li>
+                      <li>pilihlah tipe kendaraan yang masuk</li>
+                      <li>submit data kendaraan</li>
+                    </ol>
+                  </p>
+                  <p>
+                    pada bagian pengisian form juga terdapat sisa kuota/slot sisa parkir yang tersedia
+                  </p>
+                </div>
 
   						</div>
   					</div>
@@ -150,23 +159,36 @@
       <div class="timeline-items">
   			<div class="timeline-item clearfix">
   				<div class="timeline-info">
-  					<i class="timeline-indicator ace-icon btn no-hover glyphicon glyphicon-tags"></i>
+  					<i class="timeline-indicator ace-icon btn btn-warning no-hover glyphicon glyphicon-tags"></i>
   				</div>
   				<div class="widget-box transparent">
-  					<div class="widget-header widget-header-small">
-  						<h5 id="DK" class="widget-title smaller"><b>Daftar Kendaraan</b></h5>
+  					<div class="widget-header widget-header-small" style="background-color: #FFB752;">
+  						<h5 id="DK" class="widget-title smaller white"><b>Daftar Kendaraan</b></h5>
   						<span class="widget-toolbar no-border">
-  								<i class="ace-icon fa fa-check blue"></i>
+  								<i class="ace-icon fa fa-check white"></i>
   						</span>
   					</div>
   					<div class="widget-body">
-  						<div class="widget-main">
+  						<div class="widget-main col-xs-12 col-sm-6">
   							<p>
                   Pada menu menampilkan informasi semua daftar kendaraan berupa no plat, lokasi kendaraan,
                   jenis kendaraan, waktu masuk dan keluar, dan tombol aksi untuk informasi kendaraan.
                   <br><br>
-                  <img class="img-rounded img-responsive" src="{{asset('assets/images/daftar_kendaraan_potrait.png')}}" alt="daftar kendaraan potrait" />
-                  <br> ( mode potrait pada mobile ) <br><br>
+                  <ul class="ace-thumbnails clearfix">
+                    <li>
+                      <a target="_blank" class="cboxElement" data-rel="colorbox" href="{{asset('assets/images/daftar_kendaraan_potrait.png')}}">
+                        
+                        <img class="img-rounded img-responsive" src="{{asset('assets/images/daftar_kendaraan_potrait.png')}}" alt="daftar kendaraan potrait" />
+                      </a>
+                      <div class="tools tools-bottom">
+                        <p class="white"><b>mode potrait pada mobile</b></p>
+                      </div>
+                    </li>
+                  </ul>
+                </p>
+              </div>
+              <div class="widget-main col-xs-12 col-sm-6">
+                <p>  
                   <img class="img-rounded img-responsive" src="{{asset('assets/images/daftar_kendaraan_landscape.png')}}" alt="daftar kendaraan landscape" />
                   <br> ( mode landscape pada mobile ) <br><br>
                   Pada tampilan tersebut terdapat icon <img class="img-rounded img-responsive" src="{{asset('assets/images/icon.png')}}" alt="icon" />
