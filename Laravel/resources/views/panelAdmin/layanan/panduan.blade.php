@@ -16,7 +16,7 @@
   	<div class="timeline-container">
   		<div class="timeline-label">
   			<span class="label label-primary label-lg">
-  				<b>Pengenalan Content</b>
+  				<b>Daftar Content</b>
   			</span>
   		</div>
   		<div class="timeline-items">
@@ -150,7 +150,6 @@
                     pada bagian pengisian form juga terdapat sisa kuota/slot sisa parkir yang tersedia
                   </p>
                 </div>
-
   						</div>
   					</div>
   				</div>
@@ -168,38 +167,43 @@
   								<i class="ace-icon fa fa-check white"></i>
   						</span>
   					</div>
-  					<div class="widget-body">
+  					<div class="widget-body" >
   						<div class="widget-main col-xs-12 col-sm-6">
-  							<p>
+  							<p style="text-align: justify;">
+                  <span class="label-lg alert-warning"><b>1.</b></span>
                   Pada menu menampilkan informasi semua daftar kendaraan berupa no plat, lokasi kendaraan,
                   jenis kendaraan, waktu masuk dan keluar, dan tombol aksi untuk informasi kendaraan.
                   <br><br>
-                  <ul class="ace-thumbnails clearfix">
-                    <li>
-                      <a target="_blank" class="cboxElement" data-rel="colorbox" href="{{asset('assets/images/daftar_kendaraan_potrait.png')}}">
-                        
-                        <img class="img-rounded img-responsive" src="{{asset('assets/images/daftar_kendaraan_potrait.png')}}" alt="daftar kendaraan potrait" />
-                      </a>
-                      <div class="tools tools-bottom">
-                        <p class="white"><b>mode potrait pada mobile</b></p>
-                      </div>
-                    </li>
-                  </ul>
                 </p>
+                <div class="alert alert-warning">
+                  Pada tampilan gambar dibawah terdapat icon
+                  <img class="img-rounded img-responsive" src="{{asset('assets/images/icon.png')}}" />
+                </div>
+                <div class="alert alert-danger">
+                  jika ditekan akan muncul beberapa tombol <img class="img-rounded img-responsive" src="{{asset('assets/images/icon_up.png')}}" alt="icon" />
+                </div>
+                <div class="alert alert-success">
+                  jika icon ditekan dan statusnya sudah keluar <img class="img-rounded img-responsive" src="{{asset('assets/images/icon_ok.png')}}" alt="icon" />
+                </div>
               </div>
               <div class="widget-main col-xs-12 col-sm-6">
-                <p>  
-                  <img class="img-rounded img-responsive" src="{{asset('assets/images/daftar_kendaraan_landscape.png')}}" alt="daftar kendaraan landscape" />
-                  <br> ( mode landscape pada mobile ) <br><br>
-                  Pada tampilan tersebut terdapat icon <img class="img-rounded img-responsive" src="{{asset('assets/images/icon.png')}}" alt="icon" />
-                  jika ditekan akan muncul beberapa tombol <img class="img-rounded img-responsive" src="{{asset('assets/images/icon_up.png')}}" alt="icon" />
-                  jika icon ditekan dan statusnya sudah keluar <img class="img-rounded img-responsive" src="{{asset('assets/images/icon_ok.png')}}" alt="icon" />
-                  <br>
-                  <div class="alert alert-info">
+                <ul class="ace-thumbnails clearfix" >
+                  <li style="border: none;">
+                    <a target="_blank" class="cboxElement" data-rel="colorbox" href="{{asset('assets/images/daftar_kendaraan_potrait.png')}}">
+                      
+                      <img class="img-rounded img-responsive" src="{{asset('assets/images/daftar_kendaraan_potrait.png')}}" alt="daftar kendaraan potrait" />
+                    </a>
+                    <div class="tools tools-bottom">
+                      <p class="white"><b>mode potrait pada mobile</b></p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="widget-main col-xs-12 col-sm-12">
+                  <div class="alert alert-warning">
                     Note: icon tidak akan muncul pada tampilan Desktop. Karena akan langsung ditampilkan semua
                   </div>
-                </p>
-  						</div>
+              </div>
   					</div>
   				</div>
   			</div>

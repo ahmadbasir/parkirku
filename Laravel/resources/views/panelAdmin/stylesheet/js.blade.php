@@ -11,6 +11,8 @@
 <script src="{{asset('assets/js/jquery.colorbox.min.js')}}"></script>
 
 <script type="text/javascript">
+  $('[data-rel=tooltip]').tooltip({container:'body'});
+
   jQuery(function($) {
     var myTable =
     $('#dynamic-table')
@@ -22,9 +24,6 @@
         { "bSortable": false }
       ],
       "aaSorting": [],
-
-
-
       select: {
         style: 'multi'
       }
