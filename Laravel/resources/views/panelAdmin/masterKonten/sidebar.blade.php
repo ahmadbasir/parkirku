@@ -28,7 +28,7 @@
     <li class="">
     @endif
       <a href="{{ route('adminLapor') }}">
-        <i class="menu-icon fa fa-tag"></i>
+        <i class="menu-icon fa fa-bullhorn"></i>
         <span class="menu-text"> Lapor </span>
       </a>
     </li>

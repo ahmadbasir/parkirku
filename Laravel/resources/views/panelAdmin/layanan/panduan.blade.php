@@ -262,11 +262,12 @@
   						</span>
   					</div>
   					<div class="widget-body">
-  						<div class="widget-main">
-  							<p>
+  						<div class="widget-main col-xs-12 col-sm-6">
+                
+                  <img class="img-rounded img-responsive" src="{{asset('assets/images/lapor.png')}}" alt="icon" />
+                <p>
                   Pada menu ini akan menampilkan daftar Lapor dari user pengguna aplikasi
                   <br>
-                  <img class="img-rounded img-responsive" src="{{asset('assets/images/lapor.png')}}" alt="icon" />
                   <br><br>
                   Pada gambar di atas terlihat bagian informasi judul, nama pelapor, pesan, waktu lapor, dan nomor yang dapat dihubungi.<br>
                   Sebagai petugas parkir anda diwajibkan untuk mengecek menu ini, jika ada laporan kehilangan atau lainnya. <br>
