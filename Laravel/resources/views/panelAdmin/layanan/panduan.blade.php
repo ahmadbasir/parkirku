@@ -200,9 +200,13 @@
                 </ul>
               </div>
               <div class="widget-main col-xs-12 col-sm-12">
-                  <div class="alert alert-warning">
-                    Note: icon tidak akan muncul pada tampilan Desktop. Karena akan langsung ditampilkan semua
-                  </div>
+                <div class="alert alert-danger">
+                  <i class="ace-icon fa fa-quote-left"></i>
+                  untuk menampilkan waktu keluar dan waktu masuk, bisa dialihkan rotasi Handphonenya menjadi lanscape
+                </div>
+                <div class="alert alert-warning">
+                  Note: icon tidak akan muncul pada tampilan Desktop. Karena akan langsung ditampilkan semua
+                </div>
               </div>
   					</div>
   				</div>
