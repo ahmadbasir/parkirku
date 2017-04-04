@@ -46,7 +46,7 @@
 
         <div class="col-sm-9">
           <select class="col-xs-10 col-sm-5" name="tipe">
-            @if ($edit->gedung == 'MOTOR')
+            @if ($edit->tipeKendaraan == "MOTOR")
             <option value="MOTOR" selected="selected">MOTOR</option>
             <option value="MOBIL">MOBIL</option>
             @else
