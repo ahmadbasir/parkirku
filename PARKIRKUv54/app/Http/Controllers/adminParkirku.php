@@ -87,17 +87,12 @@ class adminParkirku extends Controller
   }
 
   public function viewEditKendaraan($id){
-    if(Session::has('admin')){
       $data = [
         'active'  => 2,
         'titleTop'=> 'Daftar Kendaraan',
         'edit'    => Kendaraan::findOrFail($id),
       ];
       return view('panelAdmin.layanan.editStatusKendaraan', $data);
-    }
-    else{
-      return redirect()->route('login');
-    }
   }
 
   public function editKendaraan(Request $request, $id){

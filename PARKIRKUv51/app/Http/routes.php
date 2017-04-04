@@ -13,14 +13,14 @@
 use Carbon\Carbon;
 
 /// Halaman Untuk User
-Route::get('/','homePageController@index');
+Route::get('/','homePageController@index')->name('home');
 Route::post('/','homePageController@laporkan')->name('lapor');
 
 /// Halaman Untuk Admin
 Route::get('/admin','parkirController@index')->name('adminPanel');
 Route::post('/admin','parkirController@tambahKendaraan')->name('adminKendaraanTambah');
-Route::get('/admin/keluar/{id}','parkirController@keluar')->name('adminKendaraanKeluar');
-Route::get('/admin/edit/{id}','parkirController@viewEditKendaraan')->name('tampilanEdit');
+Route::post('/admin/keluar/{id}','parkirController@keluar')->name('adminKendaraanKeluar');
+Route::post('/admin/edit/{id}','parkirController@viewEditKendaraan')->name('tampilanEdit');
 Route::put('/admin/edit/{id}','parkirController@editKendaraan')->name('edit');
 Route::get('/admin/daftar/parkir','parkirController@daftarKendaraan')->name('adminListParkir');
 Route::get('/admin/daftar/lapor','parkirController@daftarLapor')->name('adminLapor');

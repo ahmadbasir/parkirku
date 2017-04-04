@@ -59,8 +59,25 @@
                             <td width="10%">
                               <div class="hidden-sm hidden-xs action-buttons">
                                 @if ($data->kondisi == 0)
-                                <a class="red" href="/admin/keluar/{{$data->id}}"><i class="ace-icon glyphicon glyphicon-remove bigger-130"></i></a>
-                                <a class="blue" href="/admin/edit/{{$data->id}}"><i class="ace-icon glyphicon glyphicon-edit  bigger-130"></i></a>
+
+                                <a class="red" href="{{route('adminKendaraanKeluar',$data->id)}}"
+                                  onclick="event.preventDefault();
+                                           document.getElementById('keluar1').submit();">
+                                           <i class="ace-icon glyphicon glyphicon-remove bigger-130"></i>
+                                         </a>
+                                <form id="keluar1" action="{{route('adminKendaraanKeluar',$data->id)}}" method="POST" style="display: none;">
+                                  {{ csrf_field() }}
+                                </form>
+
+
+                                <a class="blue" href="{{route('tampilanEdit',$data->id)}}"
+                                  onclick="event.preventDefault();
+                                         document.getElementById('edit1').submit();">
+                                         <i class="ace-icon glyphicon glyphicon-edit  bigger-130"></i>
+                                </a>
+                                <form id="edit1" action="{{route('tampilanEdit',$data->id)}}" method="POST" style="display: none;">
+                                  {{ csrf_field() }}
+                                </form>
                                 @else
                                 <a class="green" href="#"><i class="ace-icon glyphicon glyphicon-ok bigger-130"></i></a>
                                 @endif
@@ -73,18 +90,26 @@
 																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
                                     @if ($data->kondisi == 0)
                                     <li>
-																			<a href="/admin/keluar/{{$data->id}}" class="tooltip-info" data-rel="tooltip" title="Status In">
+																			<a href="{{route('adminKendaraanKeluar',$data->id)}}" class="tooltip-info" data-rel="tooltip" title="Status In"
+                                        onclick="event.preventDefault();
+                                                 document.getElementById('keluar2').submit();">
 																				<span class="red">
 																					<i class="ace-icon glyphicon glyphicon-remove bigger-120"></i>
 																				</span>
 																			</a>
+                                      <form id="keluar2" action="{{route('adminKendaraanKeluar',$data->id)}}" method="POST" style="display: none;">
+                                          {{ csrf_field() }}
+                                      </form>
 																		</li>
                                     <li>
-																			<a href="/admin/edit/{{$data->id}}" class="tooltip-success" data-rel="tooltip" title="Edit">
-																				<span class="blue">
-																					<i class="ace-icon glyphicon glyphicon-edit bigger-120"></i>
-																				</span>
-																			</a>
+                                      <a class="blue" href="{{route('tampilanEdit',$data->id)}}"
+                                        onclick="event.preventDefault();
+                                               document.getElementById('edit2').submit();">
+                                               <i class="ace-icon glyphicon glyphicon-edit  bigger-130"></i>
+                                      </a>
+                                      <form id="edit2" action="{{route('tampilanEdit',$data->id)}}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                                      </form>
 																		</li>
                                     @else
                                     <li>

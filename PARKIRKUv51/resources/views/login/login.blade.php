@@ -97,7 +97,7 @@
 
 													<div class="clearfix">
 														<label class="inline">
-															<a href="/" class="bigger-110 pull-right btn btn-sm btn-success">Back to Home</a>
+															<a href="{{ route('home') }}" class="bigger-110 pull-right btn btn-sm btn-success">Back to Home</a>
 														</label>
 														<div class="pull-right">
 															<input type="submit" class="bigger-110 pull-right btn btn-sm btn-primary" value="Login">
