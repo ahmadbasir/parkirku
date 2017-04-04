@@ -44,6 +44,19 @@
       </a>
     </li>
 
+    @if (Auth::user()->super == 1)
+      @if ($active == 5)
+      <li class="active">
+      @else
+      <li class="">
+      @endif
+        <a href="{{ route('addUser') }}">
+          <i class="menu-icon fa fa-users"></i>
+          <span class="menu-text"> Tambah User </span>
+        </a>
+      </li>
+    @endif
+
     <li class="">
       <a href="{{ route('logout') }}"
           onclick="event.preventDefault();

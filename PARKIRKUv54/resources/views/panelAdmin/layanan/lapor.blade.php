@@ -32,7 +32,7 @@
               @foreach ($list as $data)
               <div class="timeline-item clearfix">
                 <div class="timeline-info">
-                  <span class="label label-info label-sm">{{ date('H:m',strtotime($data->created_at)) }}</span>
+                  <span class="label label-info label-sm">{{ date('H:i',strtotime($data->created_at)) }}</span>
                 </div>
 
                 <div class="widget-box transparent">

@@ -19,6 +19,8 @@ class CreateKendaraansTable extends Migration
           $table->string('tipeKendaraan');
           $table->string('gedung');
           $table->integer('kondisi');
+          $table->string('pencatatMasuk');
+          $table->string('pencatatKeluar');
           $table->timestamps();
         });
     }

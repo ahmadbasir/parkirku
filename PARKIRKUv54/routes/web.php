@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/','homePageParkirku@index');
+Route::get('/','homePageParkirku@index')->name('home');
 Route::post('/','homePageParkirku@laporkan')->name('lapor');
 
 Auth::routes();
@@ -23,3 +23,4 @@ Route::put('/admin/edit/{id}','adminParkirku@editKendaraan')->name('edit');
 Route::get('/admin/daftar/parkir','adminParkirku@daftarKendaraan')->name('adminListParkir');
 Route::get('/admin/daftar/lapor','adminParkirku@daftarLapor')->name('adminLapor');
 Route::get('/admin/panduan','adminParkirku@panduanPARKIRKU')->name('panduan');
+Route::get('/admin/user/add','adminParkirku@addUserPARKIRKU')->name('addUser');

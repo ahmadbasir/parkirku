@@ -40,9 +40,9 @@
 														<td class="center" style="display:none;"></td>
 														<td class="">{{ $data->noPlat}}</td>
                             <td class="">{{ $data->gedung }} ({{ $data->tipeKendaraan}})</td>
-                            <td class="hidden-480">{{ $data->created_at}}</td>
+                            <td class="hidden-480">{{ date('d M Y - H:i',strtotime($data->created_at))}} WIB<br>oleh <b>{{ $data->pencatatMasuk }}</b></td>
                             @if ($data->kondisi == 1)
-                            <td class="hidden-480">{{ $data->updated_at }}</td>
+                            <td class="hidden-480">{{ date('d M Y - H:i',strtotime($data->updated_at))}} WIB<br>oleh <b>{{ $data->pencatatMasuk }}</b></td>
                             @else
                             <td class="hidden-480"></td>
                             @endif

@@ -7,6 +7,7 @@ use App\Http\Controllers\homePageParkirku;
 use App\Kendaraan;
 use App\Lapor;
 use Validator;
+use Auth;
 
 class adminParkirku extends Controller
 {
@@ -66,6 +67,8 @@ class adminParkirku extends Controller
     $input->tipeKendaraan = $request->tipe;
     $input->gedung  = $request->gedung;
     $input->kondisi = 0;
+    $input->pencatatMasuk = Auth::user()->username;
+    $input->pencatatKeluar = " ";
     $input->save();
     return back()->with('tab',$request->gedung);
   }
@@ -73,6 +76,7 @@ class adminParkirku extends Controller
   public function keluar($id){
     $update = Kendaraan::findOrFail($id);
     $update->kondisi = 1;
+    $update->pencatatKeluar = Auth::user()->username;
     $update->save();
     return back();
   }
@@ -120,5 +124,18 @@ class adminParkirku extends Controller
       ];
 
       return view('panelAdmin.layanan.panduan', $data);
+  }
+
+  public function addUserPARKIRKU(){
+    if(Auth::user()->super == 1){
+      $data = [
+        'active'  => 5,
+        'titleTop'=> 'Tambah User PARKIRKU'
+      ];
+
+      return view('panelAdmin.layanan.addUser', $data);
+    }else{
+      return redirect()->route('adminPanel');
+    }
   }
 }
