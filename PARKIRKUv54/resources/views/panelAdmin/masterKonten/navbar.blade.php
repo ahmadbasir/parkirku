@@ -13,7 +13,7 @@
     <div class="navbar-header pull-left">
       <a href="{{ route('adminPanel') }}" class="navbar-brand">
         <small>
-          PARKIRKU v0.90
+          PARKIRKU v0.90  {{Auth::user()->username}}
           <i class="fa fa-exchange"></i>
         </small>
       </a>

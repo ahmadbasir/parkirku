@@ -42,7 +42,7 @@
                             <td class="">{{ $data->gedung }} ({{ $data->tipeKendaraan}})</td>
                             <td class="hidden-480">{{ date('d M Y - H:i',strtotime($data->created_at))}} WIB<br>oleh <b>{{ $data->pencatatMasuk }}</b></td>
                             @if ($data->kondisi == 1)
-                            <td class="hidden-480">{{ date('d M Y - H:i',strtotime($data->updated_at))}} WIB<br>oleh <b>{{ $data->pencatatMasuk }}</b></td>
+                            <td class="hidden-480">{{ date('d M Y - H:i',strtotime($data->updated_at))}} WIB<br>oleh <b>{{ $data->pencatatKeluar }}</b></td>
                             @else
                             <td class="hidden-480"></td>
                             @endif
@@ -62,18 +62,18 @@
 
                                 <a class="red" href="{{route('adminKendaraanKeluar',$data->id)}}"
                                   onclick="event.preventDefault();
-                                           document.getElementById('keluar1').submit();">
+                                           document.getElementById('keluar{{$data->id}}').submit();">
                                            <i class="ace-icon glyphicon glyphicon-remove bigger-130"></i>
                                          </a>
-                                <form id="keluar1" action="{{route('adminKendaraanKeluar',$data->id)}}" method="POST" style="display: none;">
+                                <form id="keluar{{$data->id}}" action="{{route('adminKendaraanKeluar',$data->id)}}" method="POST" style="display: none;">
                                   {{ csrf_field() }}
                                 </form>
                                 <a class="blue" href="{{route('tampilanEdit',$data->id)}}"
                                   onclick="event.preventDefault();
-                                  document.getElementById('edit1').submit();">
+                                  document.getElementById('edit{{$data->id}}').submit();">
                                   <i class="ace-icon glyphicon glyphicon-edit bigger-130"></i>
                                 </a>
-                                <form id="edit1" action="{{route('tampilanEdit',$data->id)}}" method="POST" style="display: none;">
+                                <form id="edit{{$data->id}}" action="{{route('tampilanEdit',$data->id)}}" method="POST" style="display: none;">
                                   {{ csrf_field() }}
                                 </form>
 
@@ -91,22 +91,22 @@
                                     <li>
 																			<a href="{{route('adminKendaraanKeluar',$data->id)}}" class="tooltip-info" data-rel="tooltip" title="Status In"
                                         onclick="event.preventDefault();
-                                                 document.getElementById('keluar2').submit();">
+                                                 document.getElementById('keluar{{$data->id}}').submit();">
 																				<span class="red">
 																					<i class="ace-icon glyphicon glyphicon-remove bigger-120"></i>
 																				</span>
 																			</a>
-                                      <form id="keluar2" action="{{route('adminKendaraanKeluar',$data->id)}}" method="POST" style="display: none;">
+                                      <form id="keluar{{$data->id}}" action="{{route('adminKendaraanKeluar',$data->id)}}" method="POST" style="display: none;">
                                           {{ csrf_field() }}
                                       </form>
 																		</li>
                                     <li>
                                       <a class="blue" href="{{route('tampilanEdit',$data->id)}}"
                                         onclick="event.preventDefault();
-                                               document.getElementById('edit2').submit();">
+                                               document.getElementById('edit{{$data->id}}').submit();">
                                                <i class="ace-icon glyphicon glyphicon-edit  bigger-130"></i>
                                       </a>
-                                      <form id="edit2" action="{{route('tampilanEdit',$data->id)}}" method="POST" style="display: none;">
+                                      <form id="edit{{$data->id}}" action="{{route('tampilanEdit',$data->id)}}" method="POST" style="display: none;">
                                         {{ csrf_field() }}
                                       </form>
 																		</li>

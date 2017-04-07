@@ -36,7 +36,7 @@
                   <h2>Gedung H </h2>
                   @if ($waktu == 1)
                   <p class="text-muted">
-                    <b>TUTUP</b> dari jam <b>08.00 - 13.30</b>, karena digunakan untuk persiapan dan waktu <strong>JUMATAN</strong>
+                    <b>TUTUP</b> dari jam <b>08.00 - 14.00</b>, karena digunakan untuk persiapan dan waktu <strong>JUMATAN</strong>
                   </p>
                   @else
                   <h3 class="text-muted">
