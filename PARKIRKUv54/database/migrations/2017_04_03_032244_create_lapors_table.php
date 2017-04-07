@@ -19,6 +19,7 @@ class CreateLaporsTable extends Migration
           $table->string('noHP');
           $table->string('judulLapor');
           $table->string('pesanLapor');
+          $table->string('publish')->default(1);
           $table->timestamps();
         });
     }

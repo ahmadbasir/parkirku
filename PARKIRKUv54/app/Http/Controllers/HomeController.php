@@ -6,23 +6,34 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
+  public function noPlat(){
+    $seed = str_split('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
+    $kode = $seed[array_rand($seed)];
+    $daerah = '';
+    foreach (array_rand($seed, 2) as $k){
+      $daerah .= $seed[$k];
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        return view('home');
+    $seedNumber = str_split('123456789');
+    $number = '';
+    foreach (array_rand($seedNumber, 4) as $k) {
+      $number .= $seedNumber[$k];
     }
+
+    $noPlat = $kode.$number.$daerah;
+    return $noPlat;
+
+  }
+
+
+  public function gedung($tipe){
+    $gedungMotor = ['G','C','E','D','H','LB'];
+    $gedungMobil = ['G','C','E'];
+    if ($tipe == 'MOTOR') {
+      $getIndex = array_rand($gedungMotor);
+    } else {
+      $getIndex = array_rand($gedungMobil);
+    }
+    return $gedungMotor[$getIndex];
+  }
 }

@@ -101,7 +101,7 @@ class adminParkirku extends Controller
 
   public function editKendaraan(Request $request, $id){
     $update = Kendaraan::findOrFail($id);
-    $update->noPlat = $request->noPlat;
+    $update->noPlat = strtoupper($request->noPlat);
     $update->tipeKendaraan = $request->tipe;
     $update->gedung = $request->gedung;
     $update->save();

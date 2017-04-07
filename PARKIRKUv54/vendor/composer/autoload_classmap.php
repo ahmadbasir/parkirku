@@ -6,6 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'CreateKendaraansTable' => $baseDir . '/database/migrations/2017_04_03_032235_create_kendaraans_table.php',
+    'CreateLaporsTable' => $baseDir . '/database/migrations/2017_04_03_032244_create_lapors_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
@@ -80,6 +82,8 @@ return array(
     'Hamcrest\\Type\\IsString' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Type/IsString.php',
     'Hamcrest\\Util' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
     'Hamcrest\\Xml\\HasXPath' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
+    'KendaraansTableSeeder' => $baseDir . '/database/seeds/KendaraansTableSeeder.php',
+    'MobilTableSeeder' => $baseDir . '/database/seeds/MobilTableSeeder.php',
     'PHPUnit\\Framework\\Assert' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
     'PHPUnit\\Framework\\BaseTestListener' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',
     'PHPUnit\\Framework\\TestCase' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/TestCase.php',
@@ -539,4 +543,5 @@ return array(
     'SebastianBergmann\\ResourceOperations\\ResourceOperations' => $vendorDir . '/sebastian/resource-operations/src/ResourceOperations.php',
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
+    'UsersTableSeeder' => $baseDir . '/database/seeds/UsersTableSeeder.php',
 );
