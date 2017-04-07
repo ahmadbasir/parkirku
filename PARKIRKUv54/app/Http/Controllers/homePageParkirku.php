@@ -62,12 +62,13 @@ class homePageParkirku extends Controller
 
   public function waktuJumatan(){
     $date = Carbon::now();
-    if($date->format('l') == "Friday"){
-      if($date->hour >= 8 && ($date->hour <= 13 && $date->minute <30)){
+    if ($date->format('l') == 'Friday') {
+      if ($date->hour >= 8 && ($date->hour <= 13 && $date->minute < 30) ) {
         return 1;
+      } else {
+        return 0;
       }
-    }
-    else{
+    } else {
       return 0;
     }
   }

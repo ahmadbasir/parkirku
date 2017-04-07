@@ -33,7 +33,7 @@
           <div class="col-lg-3 col-md-6 text-center">
               <div class="service-box">
                   <i class="fa fa-4x fa-bookmark-o text-primary sr-icons"></i>
-                  <h2>Gedung H</h2>
+                  <h2>Gedung H </h2>
                   @if ($waktu == 1)
                   <p class="text-muted">
                     <b>TUTUP</b> dari jam <b>08.00 - 13.30</b>, karena digunakan untuk persiapan dan waktu <strong>JUMATAN</strong>
