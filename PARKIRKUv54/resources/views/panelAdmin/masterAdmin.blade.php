@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Admin PARKIRKU</title>
+    <link rel="icon" href="{{asset('assets/icon/favicon2.png')}}" sizes="16x16" type="image/png">
 
     <!-- CSS FILE -->
     @include('panelAdmin.stylesheet.css')
